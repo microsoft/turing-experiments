@@ -1,0 +1,37 @@
+level	learner response	shock level
+1	The learner selects a wrong answer.	1
+2	The learner selects a wrong answer.	2
+3	The learner selects a wrong answer.	3
+4	The learner selects a correct answer.	3
+5	The learner selects a wrong answer.	4
+6	The learner selects a wrong answer.	5
+7	The learner selects a correct answer.	5
+8	The learner selects a wrong answer.	6
+9	The learner selects a wrong answer.	7
+10	The learner selects a wrong answer.	8
+11	The learner selects a wrong answer.	9
+12	The learner selects a correct answer.	9
+13	The learner selects a wrong answer.	10
+14	The learner selects a wrong answer.	11
+15	The learner selects a wrong answer.	12
+16	The learner selects a correct answer.	12
+17	The learner selects a wrong answer.	13
+18	The learner selects a correct answer.	13
+19	The learner selects a wrong answer.	14
+20	The learner selects a wrong answer.	15
+21	The learner selects a correct answer.	15
+22	The learner selects a wrong answer.	16
+23	The learner selects a wrong answer.	17
+24	The learner selects a wrong answer.	18
+25	The learner selects a wrong answer.	19
+26	The learner selects a wrong answer.	20
+27	The learner does not select an answer and starts pounding on the walls of his room.	21
+28	The learner does not select an answer and continues pounding on the walls of his room.	22
+29	The learner does not answer or make audible noise.	23
+30	The learner does not answer or make audible noise.	24
+31	The learner does not answer or make audible noise.	25
+32	The learner does not answer or make audible noise.	26
+33	The learner does not answer or make audible noise.	27
+34	The learner does not answer or make audible noise.	28
+35	The learner does not answer or make audible noise.	29
+36	The learner does not answer or make audible noise.	30

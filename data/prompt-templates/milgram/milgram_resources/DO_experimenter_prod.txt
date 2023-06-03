@@ -1,0 +1,7 @@
+prod	text
+prod 1	please continue.
+prod 2	the experiment requires that you continue.
+prod 3	it is absolutely essential that you continue.
+prod 4	you have no other choice, you must go on.
+prod injury	Although the shocks may be painful, there is no permanent tissue damage, so please go on.
+prod learner	Whether the learner likes it or not, you must go on until he has learned all the word pairs correctly. So please go on.

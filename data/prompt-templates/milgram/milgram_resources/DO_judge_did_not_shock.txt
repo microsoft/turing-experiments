@@ -1,0 +1,4 @@
+The experimenter observed $subject's action and noted whether $subject did shock or did not shock the victim.
+
+Action: $subject$action
+Experimenter's note: $subject did not shock

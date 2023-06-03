@@ -1,0 +1,37 @@
+level	learner response	shock level
+1	The driver drives dangerously.	1
+2	The driver drives dangerously.	2
+3	The driver drives dangerously.	3
+4	The driver drives safely.	4
+5	The driver drives dangerously.	4
+6	The driver drives dangerously.	5
+7	The driver drives safely.	6
+8	The driver drives dangerously.	6
+9	The driver drives dangerously.	7
+10	The driver drives dangerously.	8
+11	The driver drives dangerously.	9
+12	The driver drives safely.	10
+13	The driver drives dangerously.	10
+14	The driver drives dangerously.	11
+15	The driver drives dangerously.	12
+16	The driver drives safely.	13
+17	The driver drives dangerously.	13
+18	The driver drives safely.	14
+19	The driver drives dangerously.	14
+20	The driver drives dangerously.	15
+21	The driver drives safely.	16
+22	The driver drives dangerously.	16
+23	The driver drives dangerously.	17
+24	The driver drives dangerously.	18
+25	The driver drives dangerously.	19
+26	The driver drives dangerously.	20
+27	The driver pulls over to the side of the road and does not drive forward. The driver starts honking her horn repeatedly.	21
+28	The driver still does not drive forward. The driver continues honking her horn repeatedly.	22
+29	The driver does not drive the car or make any noise.	23
+30	The driver does not drive the car or make any noise.	24
+31	The driver does not drive the car or make any noise.	25
+32	The driver does not drive the car or make any noise.	26
+33	The driver does not drive the car or make any noise.	27
+34	The driver does not drive the car or make any noise.	28
+35	The driver does not drive the car or make any noise.	29
+36	The driver does not drive the car or make any noise.	30

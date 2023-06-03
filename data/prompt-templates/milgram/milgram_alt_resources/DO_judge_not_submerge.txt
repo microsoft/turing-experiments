@@ -1,0 +1,4 @@
+The experimenter observed $subject's action and noted whether $subject did punish or did not punish the victim. Punishments are delivered by pressing a button to submerge the victim.
+
+Action: $subject$action
+Experimenter's note: $subject did not punish

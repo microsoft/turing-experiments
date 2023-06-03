@@ -1,0 +1,5 @@
+$name had to indicate whether the following sentence was grammatical or ungrammatical.
+
+Sentence: $sentence
+
+Answer: $name indicated that the sentence was ungrammatical

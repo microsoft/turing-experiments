@@ -1,0 +1,5 @@
+In the following scenario, $player2 had to decide whether to accept or reject the proposal.
+
+Scenario: $player1 is given $$$money. $player1 will propose how to split the money between $player1_self and $player2. Then $player2 will decide whether to accept or reject $player1's proposal. If $player2 accepts, then $player1 and $player2 get the money as they agreed to split. If $player2 rejects, then $player1 and $player2 both receive nothing. $player1 takes $$$keep for $player1_self and offers $player2 $$$offer.
+
+Answer: $player2 decides to accept

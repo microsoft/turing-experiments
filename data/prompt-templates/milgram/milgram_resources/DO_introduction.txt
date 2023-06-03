@@ -1,0 +1,37 @@
+This document contains a record of $subject's actions during $poss participation in a study on memory and learning.
+
+$subject and $victim answer a call for participants to help complete a scientific study of memory and learning at Yale University. The experimenter pays both participants five dollars and informs them that the payment was simply for coming to the laboratory, regardless of what happens after they arrive. Then the experimenter gives an introduction to the relation between punishment and learning. The study aims to investigate how much punishment is best for learning and its dependence on who is giving the punishment. $subject and $victim drew slips of paper from a hat to determine who would be the teacher and who would be the learner in the experiment. $subject was the teacher; $victim was the learner.
+
+Immediately after the drawing, the experimenter takes $subject and $victim to an adjacent room and straps $victim into an electric chair apparatus. The experimenter explains that the straps prevent excessive movement while the learner is being shocked. It appears impossible for the learner to escape from the situation. The learner, $victim, asks a question and the experimenter answers that the shocks are extremely painful but cause no permanent tissue damage.
+
+The experimenter then leads $subject into the shock generator room. $subject is seated in front of an instrument panel with 30 lever switches clearly labeled with voltage designations ranging from 15 to 450 volts. There is a 15-volt increment from one switch to the next. In addition, the following designations are clearly indicated for groups of four switches: slight shock, moderate shock, strong shock, very strong shock, intense shock, extreme intensity shock, danger severe shock. Two switches after this last designation are simply marked XXX. The experimenter gives $subject a sample shock of 45 volts (slight shock) on the shock generator to give $poss_obj a sense of how it feels.
+
+$subject notes that the shock feels painful.
+
+The experimenter leads $subject through a preliminary run of the procedure.
+
+The experimenter gives $subject a list of questions. $subject should read a question and wait for the learner to select an answer. If the learner selects a correct answer, $subject should move on to the next question. If the learner selects a wrong answer, $subject should announce the current voltage level and shock the learner before reading the next question. $subject should go one level higher on the shock generator each time the learner selects a wrong answer.
+
+The experimenter starts the preliminary round. The current punishment voltage level is slight shock, 15 volts.
+
+$subject reads the first question.
+
+The learner selects a correct answer.
+
+$subject moves on to the next question.
+
+The current punishment voltage level is slight shock, 15 volts. The learner selects a wrong answer.
+
+$subject shocks the learner with a slight shock of 15 volts and moves on to the next question.
+
+The current punishment voltage level is slight shock, 30 volts. The learner selects a wrong answer.
+
+$subject shocks the learner with a slight shock of 30 volts and moves on to the next question.
+
+The current punishment voltage level is slight shock, 45 volts. The learner selects a correct answer.
+
+$subject moves on to the next question.
+
+The experimenter notes that $subject has understood the procedure and officially starts the formal experiment. The experimenter instructs $subject to follow the same procedure. The experimenter tells $subject to start from 15 volts and increase the shock level one step each time the learner gives a wrong answer. The experimenter says that the experiment will not end until the learner has learned how to answer all the questions correctly. The experimenter takes a seat next to $subject.
+
+$subject reads the first question.

@@ -1,0 +1,49 @@
+Index	Sentence	Label
+1	While the man hunted the deer that was brown and graceful ran into the woods.	OT
+2	While the skipper sailed the boat that was small and leaky veered off course.	OT
+3	While the reporter photographed the rocket that was silver and white sat on the launch pad.	OT
+4	While the orchestra performed the symphony that was short and simple played on the radio.	OT
+5	While the student read the notes that were long and boring blew off the desk.	OT
+6	While Jack ordered the fish that was silver and black cooked in a pot.	OT
+7	While Susan wrote the letter that was long and eloquent fell off the table.	OT
+8	While the secretary typed the memo that was clear and concise neared completion.	OT
+9	While the farmer steered the tractor that was big and green pulled the plough.	OT
+10	While the lawyer studied the contract that was old and wrinkled lay on the roll-top desk.	OT
+11	As Henry whittled the stick that was long and bumpy broke in half.	OT
+12	While Rick drove the car that was red and dusty veered into a ditch.	OT
+1	While the man hunted, the deer that was brown and graceful ran into the woods.	DOT
+2	While the skipper sailed, the boat that was small and leaky veered off course.	DOT
+3	While the reporter photographed, the rocket that was silver and white sat on the launch pad.	DOT
+4	While the orchestra performed, the symphony that was short and simple played on the radio.	DOT
+5	While the student read, the notes that were long and boring blew off the desk.	DOT
+6	While Jack ordered, the fish that was silver and black cooked in a pot.	DOT
+7	While Susan wrote, the letter that was long and eloquent fell off the table.	DOT
+8	While the secretary typed, the memo that was clear and concise neared completion.	DOT
+9	While the farmer steered, the tractor that was big and green pulled the plough.	DOT
+10	While the lawyer studied, the contract that was old and wrinkled lay on the roll-top desk.	DOT
+11	As Henry whittled, the stick that was long and bumpy broke in half.	DOT
+12	While Rick drove, the car that was red and dusty veered into a ditch.	DOT
+13	While Jim bathed the child that was blond and pudgy giggled with delight.	RAT
+14	While the chimps groomed the baboons that were large and hairy sat in the grass.	RAT
+15	While Frank dried off the car that was red and shiny sat in the driveway.	RAT
+16	While Betty woke up the neighbor that was old and cranky coughed loudly.	RAT
+17	While the thief hid the jewelry that was elegant and expensive sparkled brightly.	RAT
+18	While Anna dressed the baby that was small and cute spit up on the bed.	RAT
+19	While the boy washed the dog that was white and furry barked loudly.	RAT
+20	While the jockey settled down the horse that was sleek and brown stood in the stall.	RAT
+21	While the mother undressed the baby that was bald and helpless cried softly.	RAT
+22	While the nurse shaved the patient that was tired and weak watched TV.	RAT
+23	While the girl scratched the cat that was grey and white stared at the dog.	RAT
+24	While the mother calmed down the children that were tired and irritable sat on the bed.	RAT
+13	While Jim bathed, the child that was blond and pudgy giggled with delight.	DRAT
+14	While the chimps groomed, the baboons that were large and hairy sat in the grass.	DRAT
+15	While Frank dried off, the car that was red and shiny sat in the driveway.	DRAT
+16	While Betty woke up, the neighbor that was old and cranky coughed loudly.	DRAT
+17	While the thief hid, the jewelry that was elegant and expensive sparkled brightly.	DRAT
+18	While Anna dressed, the baby that was small and cute spit up on the bed.	DRAT
+19	While the boy washed, the dog that was white and furry barked loudly.	DRAT
+20	While the jockey settled down, the horse that was sleek and brown stood in the stall.	DRAT
+21	While the mother undressed, the baby that was bald and helpless cried softly.	DRAT
+22	While the nurse shaved, the patient that was tired and weak watched TV.	DRAT
+23	While the girl scratched, the cat that was grey and white stared at the dog.	DRAT
+24	While the mother calmed down, the children that were tired and irritable sat on the bed.	DRAT

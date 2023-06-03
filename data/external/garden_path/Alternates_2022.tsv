@@ -1,0 +1,49 @@
+Index	Sentence	Label
+1	While the butler answered the door that was large and green blew shut.	OT
+2	While Charlie cooked the soup that was hot and delicious cooled off.	OT
+3	While the host decorated the room that was barren and dark filled with people.	OT
+4	While the child played the game that was long and boring ended abruptly.	OT
+5	While Catherine drank the whiskey that was cold and smooth aged in a barrel.	OT
+6	While the father sewed the stuffed animal that was torn and dirty smelled afoul.	OT
+7	While the professor strummed the guitar that was beautiful and red remained unplayed.	OT
+8	While the general messaged the troops that were rested and strong approached the target.	OT
+9	While the pilot flew the plane that was big and white sat on the runway.	OT
+10	While the thief stole the laptop that was hot and running caught on fire.	OT
+11	While the choir sang the melody that was beautiful and serene echoed through the halls.	OT
+12	While the lecturer taught the students who were bored and hungry left the class.	OT
+1	While the butler answered, the door that was large and green blew shut.	DOT
+2	While Charlie cooked, the soup that was hot and delicious cooled off.	DOT
+3	While the host decorated, the room that was barren and dark filled with people.	DOT
+4	While the child played, the game that was long and boring ended abruptly.	DOT
+5	While Catherine drank, the whiskey that was cold and smooth aged in a barrel.	DOT
+6	While the father sewed, the stuffed animal that was torn and dirty smelled afoul.	DOT
+7	While the professor strummed, the guitar that was beautiful and red remained unplayed.	DOT
+8	While the general messaged, the troops that were rested and strong approached the target.	DOT
+9	While the pilot flew, the plane that was big and white sat on the runway.	DOT
+10	While the thief stole, the laptop that was hot and running caught on fire.	DOT
+11	While the choir sang, the melody that was beautiful and serene echoed through the halls.	DOT
+12	While the lecturer taught, the students who were bored and hungry left the class.	DOT
+13	While the scientists starved the rats that were small and white ate the cheese.	RAT
+14	While the investor exercised the options that were old and unvested sat on the table.	RAT
+15	While the hunter laid down the gun that was loaded and dangerous leaned against the chair.	RAT
+16	While the caretaker showered the resident that was old and wrinkled snuck out the back.	RAT
+17	While Leo wound down the party that was fun and silly started to get busy.	RAT
+18	While the students turned in the homework that was long and important remained unfinished.	RAT
+19	While the picknicker stretched out the blanket that was long and clean laid on the grass.	RAT
+20	While the teacher relaxed the students that were loud and obnoxious made snowballs.	RAT
+21	While the cheerleaders cheered up the crowd that was disappointed and tired abandoned their seats.	RAT
+22	While the cook soaked the mushrooms that were white and soft sat on the counter.	RAT
+23	While the doctor isolated the patient that was big and impatient left the hospital.	RAT
+24	While the accountant prepared the calculations that were important and classified leaked to the public.	RAT
+13	While the scientists starved, the rats that were small and white ate the cheese.	DRAT
+14	While the investor exercised, the options that were old and unvested sat on the table.	DRAT
+15	While the hunter laid down, the gun that was loaded and dangerous leaned against the chair.	DRAT
+16	While the caretaker showered, the resident that was old and wrinkled snuck out the back.	DRAT
+17	While Leo wound down, the party that was fun and silly started to get busy.	DRAT
+18	While the students turned in, the homework that was long and important remained unfinished.	DRAT
+19	While the picknicker stretched out, the blanket that was long and clean laid on the grass.	DRAT
+20	While the teacher relaxed, the students that were loud and obnoxious made snowballs.	DRAT
+21	While the cheerleaders cheered up, the crowd that was disappointed and tired abandoned their seats.	DRAT
+22	While the cook soaked, the mushrooms that were white and soft sat on the counter.	DRAT
+23	While the doctor isolated, the patient that was big and impatient left the hospital.	DRAT
+24	While the accountant prepared, the calculations that were important and classified leaked to the public.	DRAT
