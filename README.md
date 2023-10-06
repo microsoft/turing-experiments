@@ -40,7 +40,7 @@ conda activate turing-experiments
 git lfs pull
 ```
 
-The files are large, so this might take several minutes.
+The data files are large, so it might take several minutes (~5-10 min) for git LFS to download them from the remote server. Alternatively, the data files can be downloaded from GitHub using the "download raw files" button.
 
 ## Usage
 
@@ -62,7 +62,7 @@ For the _Milgram Shock_ TE we provide all prompt templates and, due to space con
 
 To query the OpenAI language models and generate new simulation results, uncomment "Section 4. Run Experiment".
 
-Enable git LFS to see the authors' consolidated results data files in the `data/simulation_results_consolidated/ultimatum_game/` folder.
+Enable git LFS and run `git lfs pull` to see the authors' consolidated results data files in the `data/simulation_results_consolidated/ultimatum_game/` folder.
 
 ```
 .
@@ -106,7 +106,7 @@ The sentence stimuli (garden path sentences and controls) are given in
 - [/data/external/garden_path/Christianson_2001.tsv](/data/external/garden_path/Christianson_2001.tsv)
 - [/data/external/garden_path/Alternates_2022.tsv](/data/external/garden_path/Alternates_2022.tsv)
 
-Enable git LFS to see the authors' consolidated results data files in the `data/simulation_results_consolidated/garden_path/` folder.
+Enable git LFS and run `git lfs pull` to see the authors' consolidated results data files in the `data/simulation_results_consolidated/garden_path/` folder.
 
 ```
 .
