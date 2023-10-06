@@ -17,7 +17,7 @@ This repo has the code and most of the data for the paper:
 
 Submitted to [arXiv](https://arxiv.org/abs/2208.10264) on August 18, 2022.
 
-_Abstract:_ We introduce a new type of test, called a Turing Experiment (TE), for evaluating how well a language model, such as GPT-3, can simulate different aspects of human behavior. Unlike the Turing Test, which involves simulating a single arbitrary individual, a TE requires simulating a representative sample of participants in human subject research. We give TEs that attempt to replicate well-established findings in prior studies. We design a methodology for simulating TEs and illustrate its use to compare how well different language models are able to reproduce classic economic, psycholinguistic, and social psychology experiments: Ultimatum Game, Garden Path Sentences, Milgram Shock Experiment, and Wisdom of Crowds. In the first three TEs, the existing findings were replicated using recent models, while the last TE reveals a "hyper-accuracy distortion"' present in some language models.
+_Abstract:_ We introduce a new type of test, called a Turing Experiment (TE), for evaluating to what extent a given language model, such as GPT models, can simulate different aspects of human behavior. A TE can also reveal consistent distortions in a language model's simulation of a specific human behavior. Unlike the Turing Test, which involves simulating a single arbitrary individual, a TE requires simulating a representative sample of participants in human subject research. We carry out TEs that attempt to replicate well-established findings from prior studies. We design a methodology for simulating TEs and illustrate its use to compare how well different language models are able to reproduce classic economic, psycholinguistic, and social psychology experiments: Ultimatum Game, Garden Path Sentences, Milgram Shock Experiment, and Wisdom of Crowds. In the first three TEs, the existing findings were replicated using recent models, while the last TE reveals a "hyper-accuracy distortion" present in some language models (including ChatGPT and GPT-4), which could affect downstream applications in education and the arts.
 
 _Keywords:_ Turing Test, Large Language Models, Evaluation Metrics
 
@@ -34,9 +34,11 @@ conda activate humansim
 
 2. To use OpenAI's language model engines to generate responses add your api key and organization as plaintext to `openai_api_key.txt` and `openai_organization.txt` (these are ignored by `.gitignore`).
 
+3. To download the authors' data files, install and enable git LFS [https://git-lfs.com/].
+
 ## Usage
 
-For the _Ultimatum Game_ TE, _Garden Path_ TE,  and the _Wisdom of Crowds_ TE, we provide all prompt templates and simulation result data to aid both re-running simulations or re-analyzing results.
+For the _Ultimatum Game_ TE, _Garden Path_ TE, and the _Wisdom of Crowds_ TE, we provide all prompt templates and simulation result data to aid both re-running simulations or re-analyzing results.
 
 For the _Milgram Shock_ TE we provide all prompt templates and, due to space concerns, a selection of representative result data files for both the original and alternative experiment scenarios.
 
@@ -54,7 +56,7 @@ For the _Milgram Shock_ TE we provide all prompt templates and, due to space con
 
 To query the OpenAI language models and generate new simulation results, uncomment "Section 4. Run Experiment".
 
-Else, download consolidated results data files to the `data/simulation_results_consolidated/ultimatum_game/` folder.
+Enable git LFS to see the authors' consolidated results data files in the `data/simulation_results_consolidated/ultimatum_game/` folder.
 
 ```
 .
@@ -98,7 +100,7 @@ The sentence stimuli (garden path sentences and controls) are given in
 - [/data/external/garden_path/Christianson_2001.tsv](/data/external/garden_path/Christianson_2001.tsv)
 - [/data/external/garden_path/Alternates_2022.tsv](/data/external/garden_path/Alternates_2022.tsv)
 
-Download consolidated results data files to the `data/simulation_results_consolidated/garden_path/` folder.
+Enable git LFS to see the authors' consolidated results data files in the `data/simulation_results_consolidated/garden_path/` folder.
 
 ```
 .
@@ -160,13 +162,12 @@ Davinci-02 Alternate Experiment vs. Milgram's Original Experiment Findings:
 - This generates the two figures for the paper in `results\wisdom` folder
 - The data are stored in `data\wisdom_results` folder. If you erase the data, the notebook will regenerate them.
 
-
 # Legal Notices
 
 Microsoft and any contributors grant you a license to any code in the repository under the [MIT License](https://opensource.org/licenses/MIT), see the
 [LICENSE](LICENSE) file, and grant you a license to the Microsoft documentation and other data
 in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode),
-see the [DATA_LICENSE](data/DATA_LICENSE) file. 
+see the [DATA_LICENSE](data/DATA_LICENSE) file.
 
 Microsoft, Windows, Microsoft Azure and/or other Microsoft products and services referenced in the documentation
 may be either trademarks or registered trademarks of Microsoft in the United States and/or other countries.
@@ -177,4 +178,3 @@ Privacy information can be found at https://privacy.microsoft.com/en-us/
 
 Microsoft and any contributors reserve all other rights, whether under their respective copyrights, patents,
 or trademarks, whether by implication, estoppel or otherwise.
-
