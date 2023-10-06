@@ -6,7 +6,6 @@ openai_organization.txt
 data/prompt-fills
 data/simulation_results
 data/simulation_results_processed
-data/simulation_results_consolidated/*/*.json.gz
 
 # VSCode
 .vscode
