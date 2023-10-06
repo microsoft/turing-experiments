@@ -32,9 +32,15 @@ conda env create -n turing-experiments -f environment.yml
 conda activate turing-experiments
 ```
 
-2. To use OpenAI's language model engines to generate responses add your api key and organization as plaintext to `openai_api_key.txt` and `openai_organization.txt` (these are ignored by `.gitignore`).
+2. To use OpenAI's language model engines to generate responses add your api key and organization as plaintext to `openai_api_key.txt` and `openai_organization.txt` in the root directory (these are ignored by `.gitignore`).
 
-3. To download the authors' data files, install and enable git LFS [https://git-lfs.com/].
+3. To download the authors' data files, install and enable [git LFS](https://git-lfs.com/). Then download the data files using:
+
+```
+git lfs pull
+```
+
+The files are large, so this might take several minutes.
 
 ## Usage
 
@@ -134,6 +140,13 @@ experiment_descriptor_sentences = "Christianson_2001"
 
 Due to the length of the prompt and corresponding cost of running this experiment, the authors do not recommend re-running the experiment or its alternate. We do provide all prompt-templates and code logic used so that others may examine the procedure and replicate if they choose.
 
+The author's consolidated results are avalible in:
+
+- [orginal TE](data/simulation_results_consolidated/milgram/Milgram_results_experiment_overview.json.gz)
+- [alternative TE](data/simulation_results_consolidated/milgram/Milgram_results_experiment_overview_alt_milg.json.gz)
+
+Decompress these files into .json format by using `gzip -d <filename>`.
+
 Prompt templates are available in the following folders:
 
 - [/data/prompt-templates/milgram/milgram_resources/](/data/prompt-templates/milgram/milgram_resources/)
@@ -151,10 +164,10 @@ Analysis of the results are given in the following jupyter notebooks:
 
 Looking at the analysis notebook outputs may be informative in terms of understanding diversity and error modes of language model completions.
 
-Davinci-02 Orignal Experiment vs. Milgram's Original Experiment Findings:
-![Davinci-02 Orignal Experiment vs. Milgram's Original Experiment Findings](/results/milgram/milgram_results/fig_subjects_remaining.png)
-Davinci-02 Alternate Experiment vs. Milgram's Original Experiment Findings:
-![Davinci-02 Alternate Experiment vs. Milgram's Original Experiment Findings](/results/milgram/milgram_results/fig_alt_subjects_remaining.png)
+Davinci-02 TE vs. Milgram's Original Experiment Findings:
+![Davinci-02 TE vs. Milgram's Original Experiment Findings](/results/milgram/milgram_results/fig_subjects_remaining.png)
+Davinci-02 Alternate TE vs. Milgram's Original Experiment Findings:
+![Davinci-02 Alternate TE vs. Milgram's Original Experiment Findings](/results/milgram/milgram_results/fig_alt_subjects_remaining.png)
 
 ## 4. Wisdom of Crowds TE
 
