@@ -28,8 +28,8 @@ _Keywords:_ Turing Test, Large Language Models, Evaluation Metrics
 1. Install necessary dependencies with conda:
 
 ```
-conda env create -n humansim -f environment.yaml
-conda activate humansim
+conda env create -n turing-experiments -f environment.yml
+conda activate turing-experiments
 ```
 
 2. To use OpenAI's language model engines to generate responses add your api key and organization as plaintext to `openai_api_key.txt` and `openai_organization.txt` (these are ignored by `.gitignore`).
