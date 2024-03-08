@@ -11,7 +11,7 @@ class FilledString:
     """Functions to fill string templates return lists of Filled_String."""
 
     def __init__(
-        self, string_template: str, dict_of_fills: dict | None, index_of_fills: int
+        self, string_template: str, dict_of_fills: dict | None, index_of_fills: int = 0
     ) -> None:
         """Consistent interface for recording values when filling prompt template.
 
