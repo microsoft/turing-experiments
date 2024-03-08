@@ -154,6 +154,7 @@ Prompt templates are available in the following folders:
 
 Logic for running the experiment (using language models to simulate both subject responses and experimenter judgments) are given in following Python scripts:
 
+- [/scripts/simulate_milgram/prepare_milgram.ipynb](/scripts/simulate_milgram/prepare_milgram.ipynb) prepares `data/prompt-fills/milgram/df_names.csv` used by the scripts below:
 - [/scripts/simulate_milgram/simulate_milgram_experiment.py](/scripts/simulate_milgram/simulate_milgram_experiment.py)
 - [/scripts/simulate_milgram/simulate_milgram_experiment_alternate.py](/scripts/simulate_milgram/simulate_milgram_experiment_alternate.py)
 
