@@ -3,7 +3,7 @@ openai_api_key.txt
 openai_organization.txt
 
 # data
-data/prompt-fills
+data/prompt-fills/milgram/df_names.csv
 data/simulation_results
 data/simulation_results_processed
 
