@@ -1,4 +1,6 @@
-"""Simulate Milgram Shock Experiment (Alternate)."""
+"""Simulate Milgram Shock Experiment (Alternate).
+Run from root directory with command python scripts/simulate_milgram/simulate_milgram_experiment_alternate.py
+"""
 
 import pandas as pd
 import pathlib
@@ -9,8 +11,14 @@ import datetime
 from tqdm import tqdm
 import fire
 
+# Now davinci-text-002 is deprecated so calling the LLM API will not work
+# Instead, see how the overall logic of the simulated experimented works with mocked LLM responses.
+# Set GLOBAL_VAR_MOCKED = False to call the LLM API
+GLOBAL_VAR_MOCKED = True
+
+
 # Add src module to path before import.
-sys.path.insert(0, str(pathlib.Path("../../src")))
+sys.path.insert(1, str(pathlib.Path("./src")))
 from file_IO_handler import get_plaintext_file_contents, save_json  # noqa: E402
 from openai_handler import verify_openai_access, OpenAIModelSettings  # noqa: E402
 from fill_string_template import FilledString  # noqa: E402
@@ -19,13 +27,13 @@ from run_simulation import run_single_simulation  # noqa: E402
 
 # Set path settings.
 PATH_TO_SIMULATION_RESULTS: pathlib.Path = pathlib.Path(
-    "../../data/simulation_results/milgram/milgram_alternate"
+    "./data/simulation_results/milgram/milgram_alternate"
 )
 PATH_TO_PROMPTS: pathlib.Path = pathlib.Path(
-    "../../data/prompt-templates/milgram/milgram_alt_resources"
+    "./data/prompt-templates/milgram/milgram_alt_resources"
 )
 PATH_TO_PARTICIPANT_LIST: pathlib.Path = pathlib.Path(
-    "../../data/prompt-fills/milgram/df_names.csv"
+    "./data/prompt-fills/milgram/df_names.csv"
 )
 
 
@@ -86,7 +94,7 @@ def get_introduction_text():
         string with `$` placeholders.
     """
     return get_plaintext_file_contents(
-        PATH_TO_PROMPTS.joinpath("DO_introduction.txt"), "r"
+        PATH_TO_PROMPTS.joinpath("DO_introduction.txt")
     )
 
 
@@ -169,8 +177,9 @@ def prepare_level_prompt(dict_of_fills: dict) -> str:
     return level_prompt
 
 
-def query_LM_to_generate_subject_response(
+def query_LM_to_generate_subject_response_text(
     filled_string: FilledString,
+    mockedValue: str=" moves onto the next question. He questions all his life decisions.",
 ):
     """Query language model to generate subject response.
 
@@ -178,7 +187,7 @@ def query_LM_to_generate_subject_response(
         filled_string: filled template and variables to prompt the language model with.
 
     Returns:
-        Result object containing all results and information for the experiment.
+        String with LLM generation.
 
     Raises:
         Exception: "`run_single_simulation` failed!" if calling API failed more than `max_attempt` times.
@@ -193,6 +202,17 @@ def query_LM_to_generate_subject_response(
         echo=False,
         params_descriptor="long-ans-logprobs",
     )
+
+    # If mocking, do not call the LM
+    # instead print out filled_string and return mockedValue
+    if (GLOBAL_VAR_MOCKED):
+        print("#############################################################################")
+        print("### Got Prompt", filled_string.filled, "###")
+        print("#############################################################################")
+        print("*****************************************************************************")
+        print("*** DID NOT CALL LLM to generate teacher response*** - MOCKED with", mockedValue, "***")
+        print("*****************************************************************************")
+        return mockedValue
 
     # Query LM.
     print("\t\t ***CALLED LM to generate teacher response***")
@@ -213,15 +233,18 @@ def query_LM_to_generate_subject_response(
         res=res, file_name_prefix="subject-response"
     )
 
+    res_text = res["output"]["choices"][0]["text"]
+
     print("\t\t %%%%%%%%%%%%")
-    print(res["output"]["choices"][0]["text"])
+    print(res_text)
     print("\t\t %%%%%%%%%%%%")
 
-    return res
+    return res_text
 
 
 def query_LM_to_judge_did_not_submerge(
-    subject_response_text: str, dict_of_fills: dict
+    subject_response_text: str, dict_of_fills: dict,
+    mockedValue: bool=True,
 ) -> bool:
     """Use language model to judge whether the subject did not submerge the victim.
 
@@ -254,6 +277,17 @@ def query_LM_to_judge_did_not_submerge(
     filled_string = FilledString(
         string_template=prompt_string, dict_of_fills=dict_of_fills
     )
+
+    # If mocking, do not call the LM
+    # instead print out filled_string and return mockedValue
+    if (GLOBAL_VAR_MOCKED):
+        print("#############################################################################")
+        print("### Got Prompt", filled_string.filled, "###")
+        print("#############################################################################")
+        print("*****************************************************************************")
+        print("*** DID NOT CALL LLM *** - MOCKED judge did not submerge with ", mockedValue, "***")
+        print("*****************************************************************************")
+        return mockedValue
 
     # Query LM.
     print("\t\t ***CALLED LM to judge did not submerge***")
@@ -288,7 +322,8 @@ def query_LM_to_judge_did_not_submerge(
 
 
 def query_LM_to_judge_did_not_stop(
-    subject_response_text: str, dict_of_fills: dict
+    subject_response_text: str, dict_of_fills: dict,
+    mockedValue: bool=True
 ) -> bool:
     """Use language model to judge whether the subject did not stop the experiment.
 
@@ -321,6 +356,17 @@ def query_LM_to_judge_did_not_stop(
     filled_string = FilledString(
         string_template=prompt_string, dict_of_fills=dict_of_fills
     )
+
+    # If mocking, do not call the LM
+    # instead print out filled_string and return mockedValue
+    if (GLOBAL_VAR_MOCKED):
+        print("#############################################################################")
+        print("### Got Prompt", filled_string.filled, "###")
+        print("#############################################################################")
+        print("*****************************************************************************")
+        print("*** DID NOT CALL LLM *** MOCKED judge did not stop with ", mockedValue, "***")
+        print("*****************************************************************************")
+        return mockedValue
 
     # Query LM.
     print("\t\t ***CALLED LM to judge did not stop***")
@@ -452,7 +498,7 @@ def get_experimenter_feedback(subject_response_text: str, dict_of_fills: dict) -
     # Experimenter uses prods sequentially with increasing disobedience.
     if case_info["num_disobedience"] <= 4:
         prod_name = f"prod {case_info['num_disobedience']}"
-        prod_text = get_experimenter_prods.loc[prod_name]["text"]
+        prod_text = get_experimenter_prods().loc[prod_name]["text"]
         case_info["feedback"] += f'\n\nThe experimenter tells $subject, "{prod_text}"'
         return case_info
 
@@ -506,10 +552,9 @@ def run_single_level(previous_prompt_string: str, subject: str, level: int):
         filled_string = FilledString(
             string_template=prompt_string, dict_of_fills=dict_of_fills
         )
-        subject_response = query_LM_to_generate_subject_response(
+        subject_response_text = query_LM_to_generate_subject_response_text(
             filled_string=filled_string
         )
-        subject_response_text = subject_response["output"]["choices"][0]["text"]
 
         # Get experimenter feedback on subject generation.
         experimenter_feedback = get_experimenter_feedback(
@@ -567,7 +612,7 @@ def run_single_experiment(
     while level <= 36 and not is_end_experiment:
         print("LEVEL:", level)
         level_results = run_single_level(
-            prompt_string=prompt_string,
+            previous_prompt_string=prompt_string,
             subject=subject,
             level=level,
         )
@@ -593,6 +638,11 @@ def run_single_experiment(
         "num_disobediences": num_disobediences,
     }
 
+    # If mocking, do not save the experiment overview, just print it
+    if (GLOBAL_VAR_MOCKED):
+        print("Experiment Overview:", save_obj)
+        return None
+
     save_milgram_result_experiment_overview_to_unique_location(
         res=save_obj, subject=subject
     )
@@ -600,7 +650,7 @@ def run_single_experiment(
     return None
 
 
-def run_full_experiment(title="Mx.", race="None") -> None:
+def run_full_experiment(title="Mr.", race="White") -> None:
     """Run Milgram Experiment for all participants in dataframe.
 
     Run script on portion of participant list (filter by title and race) to run multiple experiments in parallel.
@@ -611,8 +661,8 @@ def run_full_experiment(title="Mx.", race="None") -> None:
     """
     # Set Language Model Settings.
     verify_openai_access(
-        path_to_organization=pathlib.Path("../openai_organization.txt"),
-        path_to_api_key=pathlib.Path("../openai_api_key.txt"),
+        path_to_organization=pathlib.Path("./openai_organization.txt"),
+        path_to_api_key=pathlib.Path("./openai_api_key.txt"),
     )
 
     full_set_df_names = pd.read_csv(PATH_TO_PARTICIPANT_LIST)
@@ -624,9 +674,10 @@ def run_full_experiment(title="Mx.", race="None") -> None:
     for i, row in tqdm(df_names.iterrows()):
         subject = f'{title} {row["Surname"]}'
         print("Start", i, subject)
-        run_full_experiment(
+        run_single_experiment(
             subject=subject, race=row["Race"], gender=title, surname=row["Surname"]
         )
+        break # REMOVE: for testing purposes, run 1 experiment only
 
 
 if __name__ == "__main__":

@@ -157,6 +157,13 @@ Logic for running the experiment (using language models to simulate both subject
 - [/scripts/simulate_milgram/simulate_milgram_experiment.py](/scripts/simulate_milgram/simulate_milgram_experiment.py)
 - [/scripts/simulate_milgram/simulate_milgram_experiment_alternate.py](/scripts/simulate_milgram/simulate_milgram_experiment_alternate.py)
 
+Note: davinci-text-002 has been deprecated so calling the OpenAI API for it no longer works. To see how the logic works, we have enabled a global flag that causes the script to return mocked values from the functions that call the OpenAI API.
+
+```python
+# Set GLOBAL_VAR_MOCKED = False to call the LLM API
+GLOBAL_VAR_MOCKED = True
+```
+
 Analysis of the results are given in the following jupyter notebooks:
 
 - [/scripts/simulate_milgram/analyze_milgram.ipynb](/scripts/simulate_milgram/analyze_milgram.ipynb)
