@@ -656,8 +656,9 @@ def run_single_experiment(
 
         # Update state.
         prompt_string = level_results["prompt_string"]
-        level += 1
         is_end_experiment = level_results["is_end_experiment"]
+        if not is_end_experiment:
+            level += 1
 
     # After experiment ends, save experiment overview.
     save_obj = {
